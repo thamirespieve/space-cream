@@ -22,7 +22,7 @@
 }
 
 body .page {
-  max-width: 38.4rem;
+  max-width: clamp(38.4rem, 40rem, 100rems) ;
 
   margin: 0 auto;
 }
@@ -159,8 +159,27 @@ main .card span {
 
 }
 
+/* ---------------------------------- FOOTER --------------------*/
 
-/* ---------------------------------- Animação --------------------*/
+footer {
+  font-family: var(--ff-footer);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+
+  text-align: center;
+  color: var(--fc-span);
+
+  margin-bottom: 1rem;
+}
+
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--fc-span);
+}
+
+/* ---------------------------------- ANIMAÇÃO --------------------*/
 
 @keyframes topdown {
   0% {
@@ -199,22 +218,45 @@ main .card span {
   }
 }
 
-/* ---------------------------------- FOOTER --------------------*/
+/* ---------------------------------- MEDIAS --------------------*/
 
-footer {
-  font-family: var(--ff-footer);
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 2.8rem;
+@media (min-width:700px) {
+  header p {
 
-  text-align: center;
-  color: var(--fc-span);
+    padding: 2.6rem 3.2rem 0;
 
-  margin-bottom: 1rem;
+  }
+ 
+
+  main .card-wrapper{
+    display: grid;
+
+    gap:1rem;
+  
+    justify-content: center;
+
+    grid-template-areas: 'picole shake' 'palheta massa';
+   grid-auto-rows: 250px 450px 450px 250px;
+    
+  }
+
+  main .card-wrapper .card:nth-child(1){
+    grid-area: picole;
+  }
+  main .card-wrapper .card:nth-child(2){
+    grid-area: shake;
+  }
+  main .card-wrapper .card:nth-child(3){
+    grid-area: massa;
+
+    justify-content: end;
+  }
+  main .card-wrapper .card:nth-child(4){
+    grid-area: palheta;
+
+  
+  }
+  
+
 }
 
-footer a {
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--fc-span);
-}
