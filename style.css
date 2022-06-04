@@ -31,7 +31,7 @@ body .page {
   display: flex;
   flex-direction: column;
 
-  gap:5.2rem;
+  /* gap:5.2rem; */
 }
 
 /* ---------------------------------- HEADER --------------------*/
@@ -197,4 +197,24 @@ main .card span {
     opacity: 1;
     transform: rotate(0deg);
   }
+}
+
+/* ---------------------------------- FOOTER --------------------*/
+
+footer {
+  font-family: var(--ff-footer);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+
+  text-align: center;
+  color: var(--fc-span);
+
+  margin-bottom: 1rem;
+}
+
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--fc-span);
 }
